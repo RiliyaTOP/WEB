@@ -5,7 +5,17 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <h1>{{ h1 }}</h1>
-    <h4>{{ h4 }}</h4>
+<header>
+    {% if h1 and h4 %}
+        <h1>{{ h1 }}</h1>
+        <h4>{{ h4 }}</h4>
+    {% else %}
+        <h1>Миссия Колонизация Марса</h1>
+        <h4>И на Марсе будут яблони цвести!</h4>
+    {% endif %}
+</header>
+<main>
+    {% block main %}{% endblock %}
+</main>
 </body>
 </html>

@@ -13,6 +13,30 @@ def index(title):
     param["title"] = title
     return render_template('base.html', **param)
 
+@app.route('/list_prof/<ol>')
+def training(ol):
+    profs = [
+        "инженер исследователь",
+        "пилот",
+        "строитель",
+        "экзобиолог",
+        "врач",
+        "инженер по терраформированию",
+        "климатолог",
+        "специалист по радиационной защите",
+        "астрогеолог",
+        "гляциолог",
+        "инженер жизнеобеспечения",
+        "метеоролог",
+        "оператор марсохода",
+        "киберинженер",
+        "штурман",
+        "пилот дронов"
+    ]
+    param = {}
+    param["ol"] = ol
+    param["profs"] = profs
+    return render_template('list_prof.html', **param)
 
 
 
